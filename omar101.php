@@ -1,13 +1,22 @@
-<?php
-
-#Written by Omar FadlAllah
-#3-Jan-2014
-#Egypt 
-#Clent Name:Omar101
+<php?
+#==================================#
+# Written by: Omar FadlAllah       #
+                                   #
+# Date : 3-Jan-2014                #
+                                   #
+# dtdns update client : omar101    #
+                                   #
+#==================================#
 
 $IP=exec("wget -qO- http://ipecho.net/plain") ;
 
 
+#==========you will need only to change the below varibles =========
+$password="XXXXX" ;
+
+$host="XXXX" ;
+
+#=================================================================
 $opts = array('http' =>
     array(
         'method'  => 'GET',
@@ -17,11 +26,10 @@ $opts = array('http' =>
 
 $context = stream_context_create($opts);
 
-$result = file_get_contents("http://www.dtdns.com/api/autodns.cfm?id=host.dtdns.net&pw=XXXXXX&ip=$IP&client=omar101", false, $context);
+$result = file_get_contents("http://www.dtdns.com/api/autodns.cfm?id=$host&pw=$password&ip=$IP&client=omar101", false, $context);
 
 echo $result ;
 
-//$IP=exec("wget -qO- http://ipecho.net/plain") ;
-//echo $IP ;
+echo $IP ;
 
 ?>
