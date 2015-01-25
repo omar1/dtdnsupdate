@@ -1,4 +1,4 @@
-<php?
+<?php
 #==================================#
 # Written by: Omar FadlAllah       #
                                    #
@@ -8,7 +8,7 @@
                                    #
 #==================================#
 
-$IP=exec("wget -qO- http://ipecho.net/plain") ;
+$IP=exec("wget -q -O - checkip.dyndns.org|sed -e 's/.*Current IP Address: //' -e 's/<.*$//'") ;
 
 
 #==========you will need only to change the below varibles =========
